@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 # loading the dataset
-titanic_data = pd.read_csv('/Desktop/BETA/DATA_SCIENCE/Files/titanic.csv')
+titanic_data = pd.read_csv('titanic.csv')
 
 # changing it to a framework
 df = pd.DataFrame(titanic_data)
