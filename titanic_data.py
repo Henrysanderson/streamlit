@@ -20,6 +20,8 @@ df.dropna(inplace=True, axis=0)
 # counting the genders on the titanic
 gender_counts = df['Sex'].value_counts()
 
+# Streamlit app layout
+st.title("Titanic Data Analysis")
 # Display bar graph for number of males vs. females
 st.subheader("Gender Distribution Onboard")
 fig, ax = plt.subplots(figsize=(4, 2))
@@ -35,8 +37,7 @@ summary_table = df.groupby(['Pclass', 'Sex']).agg(
     survival_rate=('Survived', 'mean')
 ).reset_index()
 
-# Streamlit app layout
-st.title("Titanic Data Analysis")
+
 
 # Display the summary table
 st.subheader("Summary Table: Average Fare and Survival Rate by Class and Gender")
